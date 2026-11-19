@@ -16,6 +16,173 @@ header{position:absolute;z-index:5;top:0;left:0;width:100%;color:white;padding:2
 .cookie-banner{position:fixed;z-index:30;left:24px;bottom:24px;display:flex;align-items:center;gap:16px;width:min(430px,calc(100% - 32px));padding:18px 20px;background:#fff;color:#222;border:1px solid #e7e2df;border-radius:18px;box-shadow:0 12px 40px #0003;transform:translateY(140%);opacity:0;transition:transform .35s ease,opacity .35s ease}
 .cookie-banner.is-visible{transform:translateY(0);opacity:1}.cookie-icon{font-size:38px;line-height:1}.cookie-copy{font-size:13px;line-height:1.55;color:#555;flex:1}.cookie-copy strong{display:block;color:#222;font-size:14px;margin-bottom:3px}.cookie-actions{display:flex;align-items:center;gap:8px;margin-top:9px}.cookie-accept{border:0;background:var(--red);color:white;padding:10px 20px;border-radius:8px;font-weight:800;cursor:pointer}.cookie-close{border:0;background:transparent;color:#777;font-size:22px;cursor:pointer;padding:4px}
 @media(max-width:560px){.cookie-banner{left:12px;bottom:12px;width:calc(100% - 24px);padding:14px}.cookie-icon{font-size:30px}.cookie-copy{font-size:12px}}
+
+/* MOBILE ADAPTATION — desktop layout and original visual design remain unchanged */
+@media (max-width: 600px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { min-width: 0; }
+  img, iframe, video { max-width: 100%; }
+  .wrap { width: calc(100% - 32px); max-width: 100%; margin-left: auto; margin-right: auto; }
+
+  header { padding: 17px 0 12px; }
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px 8px;
+    width: 100%;
+  }
+  .brand { font-size: clamp(24px, 7vw, 30px); letter-spacing: -1.5px; }
+  .brand small { font-size: 8px; letter-spacing: 4px; margin-top: 6px; }
+  .navlinks { display: none !important; }
+  .navphone { font-size: clamp(11px, 3.2vw, 14px); white-space: nowrap; text-align: right; }
+  header .outline { display: none; }
+
+  .hero {
+    min-height: 0;
+    height: auto;
+    padding: 126px 0 34px;
+    background-position: center center;
+    background-size: cover;
+  }
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    width: calc(100% - 32px);
+    text-align: center;
+  }
+  .hero-grid > div:first-child { width: 100%; min-width: 0; }
+  .eyebrow { font-size: 10px; letter-spacing: 2.5px; line-height: 1.5; }
+  h1 {
+    font-size: clamp(39px, 11.2vw, 52px);
+    line-height: .98;
+    letter-spacing: -0.5px;
+    margin: 17px 0 18px;
+    overflow-wrap: anywhere;
+  }
+  .hero p {
+    max-width: 100%;
+    font-size: clamp(15px, 4.2vw, 18px);
+    line-height: 1.55;
+    padding: 0 2px;
+  }
+  .paint-btn {
+    margin-top: 18px;
+    padding: 17px 42px;
+    max-width: 100%;
+    font-size: 15px;
+  }
+  .hero-art {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / .88;
+    margin: 0 auto;
+  }
+  .hero-photo {
+    display: block;
+    width: min(78%, 270px);
+    height: auto;
+    aspect-ratio: .88 / 1;
+    object-fit: cover;
+    border-radius: 48% 48% 8px 8px;
+    box-shadow: 12px 12px 0 rgba(0,0,0,.12);
+  }
+  .crown { width: 82px; height: 65px; right: 2%; top: 0; }
+
+  .section { padding: 58px 0; }
+  .intro-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 22px 18px;
+    border-width: 3px;
+    min-width: 0;
+  }
+  .intro-logo { font-size: clamp(38px, 10vw, 52px); }
+  .intro-card h2 { font-size: clamp(28px, 8vw, 36px) !important; line-height: 1.05; }
+  .intro-card p { font-size: 15px; line-height: 1.7; }
+  .decor-row { gap: 10px; margin: 42px 0 18px; }
+  .decor-row .crown-mini { width: 48px; height: 38px; flex: 0 0 48px; }
+  .section-title { font-size: clamp(32px, 9vw, 43px); line-height: 1.05; }
+  .lead { margin: 0 auto 30px; font-size: 15px; line-height: 1.65; }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+  }
+  .service {
+    min-width: 0;
+    min-height: 0;
+    padding: 23px 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .service h3 { font-size: clamp(25px, 7.5vw, 32px); line-height: 1.05; overflow-wrap: anywhere; }
+  .service p { font-size: 15px; line-height: 1.65; }
+  .service img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.18 / 1;
+    object-fit: cover;
+    margin-top: 8px;
+  }
+
+  .leopard-band { padding: 38px 0; }
+  .band-inner { display: flex; flex-direction: column; text-align: center; gap: 18px; }
+  .band-inner h2 { font-size: clamp(31px, 8.5vw, 42px); line-height: 1.05; }
+  .band-inner .outline { margin: 0; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .gallery img, .gallery img:first-child {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.12;
+    object-fit: cover;
+    grid-row: auto;
+  }
+  .reviews { grid-template-columns: minmax(0, 1fr); gap: 13px; }
+  .review { padding: 21px; min-width: 0; }
+  .contacts { grid-template-columns: minmax(0, 1fr); gap: 25px; }
+  .contact-info { min-width: 0; overflow-wrap: anywhere; }
+  .contact-info h3 { font-size: 27px; }
+  .contact-info p { font-size: 15px; overflow-wrap: anywhere; }
+  .contact-links { gap: 9px; }
+  .contact-links a { padding: 13px 15px; font-size: 14px; }
+  .map { display: block; width: 100%; min-width: 0; height: 320px; min-height: 320px; }
+
+  footer { padding: 45px 0 28px; }
+  .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .footer-links { grid-template-columns: minmax(0, 1fr); gap: 11px; }
+  .footer-links a { line-height: 1.5; overflow-wrap: anywhere; }
+  .copyright { line-height: 1.6; }
+
+  .sticky-book {
+    width: 78px; height: 78px; right: 12px; bottom: 14px;
+    font-size: 10px; line-height: 1.35; letter-spacing: .4px;
+    border-width: 4px;
+  }
+  .phone-float { width: 48px; height: 48px; left: 12px; bottom: 16px; font-size: 21px; }
+  .seo-page { padding: 125px 0 55px; }
+  .seo-page h1 { font-size: clamp(32px, 9vw, 42px); line-height: 1.05; }
+  .seo-page p { font-size: 15px; line-height: 1.75; }
+}
+@media (max-width: 360px) {
+  .wrap, .hero-grid { width: calc(100% - 24px); }
+  .navphone { font-size: 10px; }
+  h1 { font-size: 37px; }
+  .hero { padding-top: 116px; }
+  .sticky-book { width: 70px; height: 70px; font-size: 9px; right: 9px; bottom: 10px; }
+  .phone-float { width: 43px; height: 43px; left: 9px; bottom: 12px; }
+}
+
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="#">FOMENST<small>NAIL STUDIO</small></a><nav class="navlinks"><a href="#services">Услуги</a><a href="#about">О студии</a><a href="#works">Работы</a><a href="#contacts">Контакты</a></nav><div class="navphone">+7‒911‒269‒37‒20</div><a class="outline" href="https://dikidi.ru/2018787" target="_blank" rel="noopener">Записаться</a></div></header>
 <main>
