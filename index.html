@@ -227,6 +227,29 @@ header{position:absolute;z-index:5;top:0;left:0;width:100%;color:white;padding:2
     max-height: none;
   }
 }
+
+/* FINAL PHOTO FIT FIX — only the hero photo and the last gallery photo */
+.hero-photo {
+  object-fit: cover !important;
+  object-position: center center !important;
+  background: #210b0b !important;
+}
+@media (max-width: 600px) {
+  .hero-photo {
+    object-fit: cover !important;
+    object-position: center center !important;
+    background: #210b0b !important;
+  }
+}
+.gallery img:last-child {
+  height: auto !important;
+  max-height: 520px;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f1f0ee !important;
+}
+
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="#">FOMENST<small>NAIL STUDIO</small></a><nav class="navlinks"><a href="#services">Услуги</a><a href="#about">О студии</a><a href="#works">Работы</a><a href="#contacts">Контакты</a></nav><div class="navphone">+7‒911‒269‒37‒20</div><a class="outline" href="https://dikidi.ru/2018787" target="_blank" rel="noopener">Записаться</a></div></header>
 <main>
