@@ -230,15 +230,17 @@ header{position:absolute;z-index:5;top:0;left:0;width:100%;color:white;padding:2
 
 /* FINAL PHOTO FIT FIX — only the hero photo and the last gallery photo */
 .hero-photo {
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
   background: #4b0714 !important;
+  box-shadow: none !important;
 }
 @media (max-width: 600px) {
   .hero-photo {
-    object-fit: cover !important;
+    object-fit: contain !important;
     object-position: center center !important;
     background: #4b0714 !important;
+    box-shadow: none !important;
   }
 }
 .gallery img:last-child {
