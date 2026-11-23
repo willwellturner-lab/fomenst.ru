@@ -228,19 +228,25 @@ header{position:absolute;z-index:5;top:0;left:0;width:100%;color:white;padding:2
   }
 }
 
-/* FINAL PHOTO FIT FIX — only the hero photo and the last gallery photo */
+/* FINAL PHOTO FIT FIX — seamless burgundy hero arch */
 .hero-photo {
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center !important;
   background: #4b0714 !important;
+  border: 0 !important;
+  outline: 0 !important;
   box-shadow: none !important;
+  display: block !important;
 }
 @media (max-width: 600px) {
   .hero-photo {
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center center !important;
     background: #4b0714 !important;
+    border: 0 !important;
+    outline: 0 !important;
     box-shadow: none !important;
+    display: block !important;
   }
 }
 .gallery img:last-child {
