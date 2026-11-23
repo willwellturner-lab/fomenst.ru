@@ -207,6 +207,24 @@ header{position:absolute;z-index:5;top:0;left:0;width:100%;color:white;padding:2
 .price-ornament span{font-size:20px;color:#b52b20}
 @media(max-width:700px){.price-section{padding:60px 0}.price-grid{grid-template-columns:minmax(0,1fr);gap:14px}.price-card{padding:23px 20px}.price-card-wide{grid-column:auto}.price-card-wide .price-columns{grid-template-columns:minmax(0,1fr)}.price-card h3{font-size:26px}.price-item{font-size:14px}.price-item strong{font-size:15px}.price-intro{font-size:15px}.price-section:before{width:170px;height:170px;right:-85px;top:30px}}
 
+
+/* SERVICE PHOTOS: show each complete image without cropping */
+.service img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  object-position: center;
+  background: #f1f0ee;
+}
+@media (max-width: 600px) {
+  .service img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    max-height: none;
+  }
+}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="#">FOMENST<small>NAIL STUDIO</small></a><nav class="navlinks"><a href="#services">Услуги</a><a href="#about">О студии</a><a href="#works">Работы</a><a href="#contacts">Контакты</a></nav><div class="navphone">+7‒911‒269‒37‒20</div><a class="outline" href="https://dikidi.ru/2018787" target="_blank" rel="noopener">Записаться</a></div></header>
 <main>
